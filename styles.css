@@ -14,17 +14,22 @@ body {
 }
 
 .catalog {
-  min-height: 100vh;
-  padding: clamp(20px, 4vw, 60px) 5%;
   max-width: 1920px;
   margin: 0 auto;
+  padding: clamp(20px, 4vw, 60px) 20px;  /* Базовые боковые отступы */
 }
 
-.catalog__header {
-  margin-bottom: clamp(30px, 5vw, 60px);
+.catalog__header,
+.catalog__controls,
+.catalog__main {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog__top {
+  max-width: 1230px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;        /* Всё по центру горизонтально */
@@ -60,10 +65,10 @@ body {
 .catalog__controls {
   display: flex;
   justify-content: space-between;
-  align-items: center;        /* ← ВКЛЮЧИ ОБЯЗАТЕЛЬНО */
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px 40px;             /* вертикальный и горизонтальный gap */
-  margin-bottom: clamp(40px, 6vw, 80px);
+  gap: 20px;
+  width: 100%;                      /* Занимают всю доступную ширину контейнера */
 }
 
 .catalog__filters {
@@ -154,12 +159,18 @@ body {
   pointer-events: none;
 }
 
+.catalog__main {
+  max-width: 1230px;                /* Точная ширина grid по макету */
+  margin: 0 auto;                   /* Центрируем по горизонтали */
+  padding-top: clamp(40px, 6vw, 80px);  /* Отступ сверху (примерно соответствует Top 327px от верха страницы с учётом шапки) */
+}
+
 .catalog__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 390px));  /* Максимум 390px, как в макете */
-  gap: clamp(20px, 3vw, 40px);
-  justify-content: center;  /* Центрируем grid на больших экранах */
-  margin-bottom: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));  /* Каждая карточка ~390px, но резиновая */
+  gap: clamp(20px, 3vw, 30px);       /* Отступы между карточками */
+  justify-content: center; 
+  width: 100%;         /* Центрируем карточки внутри 1230px контейнера */
 }
 
 .catalog__card {
@@ -211,38 +222,52 @@ body {
   margin-bottom: 12px;
 }
 
-.catalog__card-badge--marketing { background: #28a745; }
-.catalog__card-badge--management { background: #007bff; }
-.catalog__card-badge--hr { background: #fd7e14; }
-.catalog__card-badge--design { background: #e83e8c; }
-.catalog__card-badge--development { background: #6f42c1; }
+.catalog__card-badge--marketing { background: #03CEA4; }
+.catalog__card-badge--management { background: #5A87FC; }
+.catalog__card-badge--hr { background: #F89828; }
+.catalog__card-badge--design { background: #F52F6E; }
+.catalog__card-badge--development { background: #7772F1; }
 
 .catalog__card-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 12px;
-  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;                 /* Bold */
+  font-size: 20px;                  /* Точный размер из макета */
+  line-height: 150%;                /* 150% = 30px при 20px шрифте */
+  letter-spacing: 0;                /* Без доп. расстояния между буквами */
+  margin: 0 0 12px 0;               /* Отступ снизу до цены/автора */
+  color: #1E212C;                   /* Основной тёмный цвет текста, как везде */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2;            /* Ограничение на 2 строки */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-clamp: 2;
+  line-clamp: 2;                    /* Стандартное свойство для совместимости */
 }
 
 .catalog__card-price {
-  font-size: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;                        /* Отступ между элементами */
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: #24282f;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FF3F3A;
   margin: 0;
 }
 
-.catalog__card-price .catalog__card-author {
-  font-size: 14px;
+.catalog__card-author::before {
+  content: '|';
+  color: #787A80;
+  margin-right: 12px;               /* Отступ после разделителя */
+}
+
+.catalog__card-author {
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: #6c757d;
-  display: block;
-  margin-top: 4px;
+  font-size: 18px;
+  line-height: 150%;
+  color: #787A80;
 }
 
 .catalog__load-more {
