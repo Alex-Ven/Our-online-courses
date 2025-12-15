@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our online courses</title>
+  <link rel="stylesheet" href="styles.css" /> <!-- Здесь будет скомпилированный SCSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="catalog">
+  <header class="catalog__header">
+    <div class="catalog__top">
+      <p class="catalog__enjoy">ENJOY YOUR STUDYING!</p>
+      <h1 class="catalog__title">Our online courses</h1>
+    </div>
+    </div>
+
+    <div class="catalog__controls">
+      <nav class="catalog__filters">
+        <button class="catalog__filter catalog__filter--active" data-category="all">All <sup>17</sup></button>
+        <button class="catalog__filter" data-category="marketing">Marketing <sup>4</sup></button>
+        <button class="catalog__filter" data-category="management">Management <sup>3</sup></button>
+        <button class="catalog__filter" data-category="hr">HR & Recruiting <sup>5</sup></button>
+        <button class="catalog__filter" data-category="design">Design <sup>2</sup></button>
+        <button class="catalog__filter" data-category="development">Development <sup>3</sup></button>
+      </nav>
+
+      <div class="catalog__search">
+        <input type="text" class="catalog__search-input" placeholder="Search course..." />
+        <span class="catalog__search-icon">🔍</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalog__main">
+    <div class="catalog__grid">
+      <!-- Курс 1 -->
+      <article class="catalog__card" data-category="marketing">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--marketing">Marketing</span>
+          <h3 class="catalog__card-title">The Ultimate Google Ads Training Course</h3>
+          <p class="catalog__card-price">$100 <span class="catalog__card-author">by Jerome Bell</span></p>
+        </div>
+      </article>
+
+      <!-- Курс 2 -->
+      <article class="catalog__card" data-category="management">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--management">Management</span>
+          <h3 class="catalog__card-title">Product Management Fundamentals</h3>
+          <p class="catalog__card-price">$480 <span class="catalog__card-author">by Marvin McKinney</span></p>
+        </div>
+      </article>
+
+      <!-- Курс 3 -->
+      <article class="catalog__card" data-category="hr">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1552058544-f2d2f0814d2e?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--hr">HR & Recruiting</span>
+          <h3 class="catalog__card-title">HR Management and Analytics</h3>
+          <p class="catalog__card-price">$200 <span class="catalog__card-author">by Leslie Alexander Li</span></p>
+        </div>
+      </article>
+
+      <!-- Добавь остальные курсы аналогично (я привёл примеры, остальные по скриншоту) -->
+      <article class="catalog__card" data-category="marketing">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--marketing">Marketing</span>
+          <h3 class="catalog__card-title">Brand Management & PR Communications</h3>
+          <p class="catalog__card-price">$530 <span class="catalog__card-author">by Kristin Watson</span></p>
+        </div>
+      </article>
+
+      <article class="catalog__card" data-category="design">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1580489940927-457f76d610ed?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--design">Design</span>
+          <h3 class="catalog__card-title">Graphic Design Basic</h3>
+          <p class="catalog__card-price">$500 <span class="catalog__card-author">by Guy Hawkins</span></p>
+        </div>
+      </article>
+
+      <article class="catalog__card" data-category="management">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1560250097-0dde6cec3393?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--management">Management</span>
+          <h3 class="catalog__card-title">Business Development Management</h3>
+          <p class="catalog__card-price">$400 <span class="catalog__card-author">by Dianne Russell</span></p>
+        </div>
+      </article>
+
+      <!-- Продолжай до всех видимых на скриншоте курсов (около 9-12) -->
+      <!-- Пример ещё одного -->
+      <article class="catalog__card" data-category="development">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--development">Development</span>
+          <h3 class="catalog__card-title">Highload Software Architecture</h3>
+          <p class="catalog__card-price">$600 <span class="catalog__card-author">by Brooklyn Simmons</span></p>
+        </div>
+      </article>
+
+      <article class="catalog__card" data-category="hr">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1552058544-f2d2f0814d2e?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--hr">HR & Recruiting</span>
+          <h3 class="catalog__card-title">Human Resources – Selection and Recruitment</h3>
+          <p class="catalog__card-price">$150 <span class="catalog__card-author">by Kathryn Murphy</span></p>
+        </div>
+      </article>
+
+      <article class="catalog__card" data-category="design">
+        <div class="catalog__card-image"
+          style="background-image: url('https://images.unsplash.com/photo-1580489940927-457f76d610ed?w=800');"></div>
+        <div class="catalog__card-content">
+          <span class="catalog__card-badge catalog__card-badge--design">Design</span>
+          <h3 class="catalog__card-title">User Experience. Human-centered Design</h3>
+          <p class="catalog__card-price">$240 <span class="catalog__card-author">by Cody Fisher</span></p>
+        </div>
+      </article>
+
+      <!-- ... остальные по аналогии -->
+    </div>
+
+    <button class="catalog__load-more">↻ Load more</button>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
