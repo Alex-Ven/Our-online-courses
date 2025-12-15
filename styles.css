@@ -156,17 +156,21 @@ body {
 
 .catalog__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 390px));  /* Максимум 390px, как в макете */
   gap: clamp(20px, 3vw, 40px);
+  justify-content: center;  /* Центрируем grid на больших экранах */
   margin-bottom: 50px;
 }
 
 .catalog__card {
+  width: 390px;                     /* Фиксированная ширина на десктопе */
+  max-width: 100%;                  /* Не вылазит за экран на мобильных */
+  height: 438px;                    /* Фиксированная высота */
   background: #FFFFFF;
   border: 1px solid #E5E8ED;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03);  /* #1E212C с 3% opacity */
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03);  /* Лёгкая тень из макета */
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -174,7 +178,7 @@ body {
 
 .catalog__card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 20px -8px rgba(30, 33, 44, 0.1);  /* Усиленная тень при hover — опционально, но красиво */
+  box-shadow: 0 12px 20px -8px rgba(30, 33, 44, 0.08);
 }
 
 .catalog__card-image {
@@ -242,20 +246,36 @@ body {
 }
 
 .catalog__load-more {
-  display: block;
-  margin: 0 auto;
-  padding: 14px 32px;
-  background: transparent;
-  border: 2px solid #24282f;
-  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                        /* Расстояние между иконкой и текстом */
+  margin: 60px auto 0;
+  padding: 8px 20px;                /* Комфортный паддинг */
+  min-height: 26px;                 /* Высота по макету */
+  background: transparent;          /* Прозрачный фон */
+  border: none;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   font-size: 16px;
-  font-weight: 600;
-  color: #24282f;
+  line-height: 160%;
+  color: #1E212C;                   /* Тёмный текст */
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.catalog__load-more-icon {
+  font-size: 18px;                  /* Иконка чуть больше текста */
+  color: #1E212C;
+}
+
 .catalog__load-more:hover {
-  background: #24282f;
-  color: #ffffff;
+  background: rgba(30, 33, 44, 0.05); /* Лёгкое затемнение фона при ховере */
+  border-radius: 4px;
+}
+
+.catalog__load-more:hover .catalog__load-more-icon {
+  transform: translateY(2px);       /* Стрелка слегка опускается при ховере */
+  transition: transform 0.3s ease;
 }
