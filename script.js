@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentCategory = 'all'; // Текущая выбранная категория
   let visibleCards = []; // Массив видимых карточек
-  const cardsPerLoad = 8; // Количество карточек для загрузки по кнопке
+  const cardsPerLoad = 9; // Количество карточек для загрузки по кнопке
   let currentVisibleCount = cardsPerLoad; // Сколько карточек сейчас видно
 
   // Создаем словарь названий категорий для поиска
