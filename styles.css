@@ -391,3 +391,22 @@ body {
     margin: 0;
   }
 }
+
+
+.page-decoration__vector {
+  position: fixed;
+  width: 85px;
+  height: 85px;
+  top: 1054px;                    /* Точно как в Figma */
+  right: 50px;     /* Поворот на -180° */
+  opacity: 1;
+  z-index: -1;                     /* Под карточками */
+  pointer-events: none;            /* Не мешает кликам */
+}
+
+/* Стили для SVG внутри */
+.page-decoration__vector svg {
+  width: 100%;
+  height: 100%;
+  color: #FFCF2D;                  /* Цвет как в макете */
+}
