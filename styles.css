@@ -177,9 +177,33 @@ body {
   width: 100%;
 }
 
+/* Специально для случая, когда 1 или 2 карточки после фильтрации */
+.catalog__grid:has(.catalog__card:nth-last-child(1):nth-child(1)),
+.catalog__grid:has(.catalog__card:nth-last-child(2):nth-child(1)):has(.catalog__card:nth-child(2)) {
+  grid-template-columns: repeat(auto-fit, 
+    minmax(
+      clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px),
+      clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px)
+    )
+  );
+  justify-content: center;
+}
+
+/* Если только одна карточка — ещё больше центрирования */
+.catalog__grid:has(.catalog__card:nth-last-child(1):nth-child(1)) {
+  justify-content: center;
+  grid-template-columns: 
+    minmax(
+      min(100%, clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px)),
+      clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px)
+    );
+}
+
+
 .catalog__card {
   width: 100%;
-  max-width: 100%;
+  max-width: clamp(280px, calc(280px + (610 - 280) * ((100vw - 320px) / (1920 - 320))), 610px);
+  margin: 0 auto;
   height: clamp(380px, calc(380px + (438 - 380) * ((100vw - 320px) / (1920 - 320))), 438px);
   background: var(--color-white);
   border: 1px solid #E5E8ED;
