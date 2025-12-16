@@ -7,13 +7,15 @@
   --color-gray-medium: #6c757d;
   --color-gray-light: #787a80;
   --color-gray-border: #e9ecef;
+  --color-card-border: #e5e8ed;
   --color-gray-border-hover: #d1d5db;
-  --color-gray-placeholder: #bdbdbd;
-  --color-background: #ffffff;;
+  --color-gray-placeholder: #9a9ca5;
+  --color-background: #ffffff;
   --color-white: #ffffff;
-  --color-card-shadow: rgba(30, 33, 44, 0.03);
-  --color-card-shadow-hover: rgba(30, 33, 44, 0.08);
+  --color-card-shadow: rgba(30, 33, 44, 0.08);
+  --color-card-shadow-hover: rgba(30, 33, 44, 0.16);
   --color-hover-bg: rgba(30, 33, 44, 0.05);
+  --color-vector-yellow: #ffcf2d;
 
   /* Бейджи курсов */
   --color-badge-marketing: #03cea4;
@@ -60,23 +62,10 @@
   --border-radius: 4px;
 
   /* Тени */
-  --shadow-card: 0 4px 4px -4px var(--color-card-shadow);
-  --shadow-card-hover: 0 12px 20px -8px var(--color-card-shadow-hover);
+  --shadow-card: 0 12px 20px -8px var(--color-card-shadow);
+  --shadow-card-hover: 0 20px 32px -12px var(--color-card-shadow-hover);
   --shadow-focus: 0 0 0 3px var(--color-primary-light);
 
   /* Анимации */
   --transition-default: all 0.3s ease;
 }
-
-/* Темная тема (опционально)
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-dark: #ffffff;
-    --color-gray-dark: #f8f9fa;
-    --color-background: #1a1d28;
-    --color-white: #24282f;
-    --color-gray-border: #2d323d;
-    --color-card-shadow: rgba(0, 0, 0, 0.1);
-    --color-card-shadow-hover: rgba(0, 0, 0, 0.2);
-  }
-} */
