@@ -1,13 +1,11 @@
-/* variables.css — CSS-переменные для каталога */
-
 :root {
   /* Цвета */
-  --color-primary: #FF3F3A;
+  --color-primary: #ff3f3a;
   --color-primary-light: rgba(255, 63, 58, 0.1);
-  --color-dark: #1E212C;
+  --color-dark: #1e212c;
   --color-gray-dark: #24282f;
   --color-gray-medium: #6c757d;
-  --color-gray-light: #787A80;
+  --color-gray-light: #787a80;
   --color-gray-border: #e9ecef;
   --color-gray-border-hover: #d1d5db;
   --color-gray-placeholder: #bdbdbd;
@@ -16,14 +14,14 @@
   --color-card-shadow: rgba(30, 33, 44, 0.03);
   --color-card-shadow-hover: rgba(30, 33, 44, 0.08);
   --color-hover-bg: rgba(30, 33, 44, 0.05);
-  
+
   /* Бейджи курсов */
-  --color-badge-marketing: #03CEA4;
-  --color-badge-management: #5A87FC;
-  --color-badge-hr: #F89828;
-  --color-badge-design: #F52F6E;
-  --color-badge-development: #7772F1;
-  
+  --color-badge-marketing: #03cea4;
+  --color-badge-management: #5a87fc;
+  --color-badge-hr: #f89828;
+  --color-badge-design: #f52f6e;
+  --color-badge-development: #7772f1;
+
   /* Размеры */
   --container-max-width: 1920px;
   --content-max-width: 1230px;
@@ -31,11 +29,11 @@
   --card-height: 438px;
   --card-image-height: 240px;
   --filter-height: 46px;
-  
+
   /* Шрифты */
-  --font-family-primary: 'Inter', system-ui, sans-serif;
-  --font-family-secondary: 'Lato', 'Inter', system-ui, sans-serif;
-  
+  --font-family-primary: "Inter", system-ui, sans-serif;
+  --font-family-secondary: "Lato", "Inter", system-ui, sans-serif;
+
   /* Размеры шрифтов */
   --font-size-base: 16px;
   --font-size-small: 12px;
@@ -43,13 +41,13 @@
   --font-size-large: 20px;
   --font-size-xl: 46px;
   --font-size-xxl: clamp(36px, 5vw, 46px);
-  
+
   /* Межстрочные интервалы */
   --line-height-base: 1.5;
   --line-height-130: 130%;
   --line-height-150: 150%;
   --line-height-160: 160%;
-  
+
   /* Отступы */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -57,15 +55,15 @@
   --spacing-lg: 20px;
   --spacing-xl: 60px;
   --spacing-xxl: 80px;
-  
+
   /* Радиусы */
   --border-radius: 4px;
-  
+
   /* Тени */
   --shadow-card: 0 4px 4px -4px var(--color-card-shadow);
   --shadow-card-hover: 0 12px 20px -8px var(--color-card-shadow-hover);
   --shadow-focus: 0 0 0 3px var(--color-primary-light);
-  
+
   /* Анимации */
   --transition-default: all 0.3s ease;
 }

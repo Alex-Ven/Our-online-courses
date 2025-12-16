@@ -1,5 +1,3 @@
-/* style.css — полностью резиновый адаптив от 320px до 1920px */
-
 *,
 *::before,
 *::after {
@@ -9,7 +7,11 @@
 body {
   margin: 0;
   font-family: var(--font-family-primary);
-  font-size: clamp(14px, calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320))), 16px);
+  font-size: clamp(
+    14px,
+    calc(16px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+    16px
+  );
   background-color: var(--color-background);
   color: var(--color-gray-dark);
   line-height: var(--line-height-base);
@@ -47,9 +49,16 @@ body {
 .catalog__enjoy {
   font-family: var(--font-family-secondary);
   font-weight: 700;
-  font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))), 16px);
+  font-size: clamp(
+    14px,
+    calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+    16px
+  );
   line-height: var(--line-height-150);
-  letter-spacing: min(0.5px, calc(0.5px + (1 - 0.5) * ((100vw - 320px) / (1920 - 320))));
+  letter-spacing: min(
+    0.5px,
+    calc(0.5px + (1 - 0.5) * ((100vw - 320px) / (1920 - 320)))
+  );
   text-transform: uppercase;
   color: var(--color-dark);
   margin: 0 0 clamp(4px, 0.5vw, 8px) 0;
@@ -59,7 +68,11 @@ body {
 .catalog__title {
   font-family: var(--font-family-secondary);
   font-weight: 900;
-  font-size: clamp(28px, calc(28px + (46 - 28) * ((100vw - 320px) / (1920 - 320))), 46px);
+  font-size: clamp(
+    28px,
+    calc(28px + (46 - 28) * ((100vw - 320px) / (1920 - 320))),
+    46px
+  );
   line-height: var(--line-height-130);
   letter-spacing: 0;
   color: var(--color-dark);
@@ -90,14 +103,25 @@ body {
   align-items: center;
   justify-content: center;
   padding: clamp(8px, 0.8vw, 10px) clamp(12px, 1.5vw, 20px);
-  height: clamp(40px, calc(40px + (46 - 40) * ((100vw - 320px) / (1920 - 320))), 46px);
-  min-width: max(60px, calc(60px + (77 - 60) * ((100vw - 320px) / (1920 - 320))));
+  height: clamp(
+    40px,
+    calc(40px + (46 - 40) * ((100vw - 320px) / (1920 - 320))),
+    46px
+  );
+  min-width: max(
+    60px,
+    calc(60px + (77 - 60) * ((100vw - 320px) / (1920 - 320)))
+  );
   background: var(--color-white);
   border: 1px solid var(--color-gray-border);
   border-radius: clamp(3px, 0.3vw, 4px);
   font-family: var(--font-family-secondary);
   font-weight: 700;
-  font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))), 16px);
+  font-size: clamp(
+    14px,
+    calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+    16px
+  );
   color: var(--color-gray-medium);
   text-align: center;
   cursor: pointer;
@@ -106,7 +130,11 @@ body {
   flex-shrink: 0;
 
   sup {
-    font-size: clamp(10px, calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320))), 12px);
+    font-size: clamp(
+      10px,
+      calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320))),
+      12px
+    );
     margin-left: clamp(3px, 0.4vw, 6px);
     opacity: 0.8;
   }
@@ -136,12 +164,20 @@ body {
 
 .catalog__search-input {
   width: 100%;
-  height: clamp(40px, calc(40px + (46 - 40) * ((100vw - 320px) / (1920 - 320))), 46px);
+  height: clamp(
+    40px,
+    calc(40px + (46 - 40) * ((100vw - 320px) / (1920 - 320))),
+    46px
+  );
   padding: 0 clamp(36px, 3vw, 45px) 0 clamp(16px, 1.5vw, 20px);
   border: 1px solid var(--color-gray-border);
   border-radius: clamp(3px, 0.3vw, 4px);
   font-family: var(--font-family-secondary);
-  font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))), 16px);
+  font-size: clamp(
+    14px,
+    calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+    16px
+  );
   background: var(--color-white);
 }
 
@@ -160,7 +196,11 @@ body {
   right: clamp(12px, 1.2vw, 16px);
   top: 50%;
   transform: translateY(-50%);
-  font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))), 18px);
+  font-size: clamp(
+    16px,
+    calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))),
+    18px
+  );
   color: var(--color-gray-placeholder);
   pointer-events: none;
 }
@@ -173,42 +213,84 @@ body {
 
 .catalog__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px), 1fr));
-  gap: clamp(16px, calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320))), 30px);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      clamp(
+        280px,
+        calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))),
+        390px
+      ),
+      1fr
+    )
+  );
+  gap: clamp(
+    16px,
+    calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320))),
+    30px
+  );
   justify-content: center;
   width: 100%;
 }
 
 /* Специально для случая, когда 1 или 2 карточки после фильтрации */
 .catalog__grid:has(.catalog__card:nth-last-child(1):nth-child(1)),
-.catalog__grid:has(.catalog__card:nth-last-child(2):nth-child(1)):has(.catalog__card:nth-child(2)) {
-  grid-template-columns: repeat(auto-fit,
-      minmax(clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px),
-        clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px)));
+.catalog__grid:has(.catalog__card:nth-last-child(2):nth-child(1)):has(
+    .catalog__card:nth-child(2)
+  ) {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      clamp(
+        280px,
+        calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))),
+        390px
+      ),
+      clamp(
+        280px,
+        calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))),
+        390px
+      )
+    )
+  );
   justify-content: center;
 }
 
 /* Если только одна карточка — ещё больше центрирования */
 .catalog__grid:has(.catalog__card:nth-last-child(1):nth-child(1)) {
   justify-content: center;
-  grid-template-columns:
-    minmax(min(100%, clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px)),
-      clamp(280px, calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))), 390px));
+  grid-template-columns: minmax(
+    min(
+      100%,
+      clamp(
+        280px,
+        calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))),
+        390px
+      )
+    ),
+    clamp(
+      280px,
+      calc(280px + (390 - 280) * ((100vw - 320px) / (1920 - 320))),
+      390px
+    )
+  );
 }
-
 
 .catalog__card {
   width: 100%;
-  max-width: clamp(280px, calc(280px + (610 - 280) * ((100vw - 320px) / (1920 - 320))), 610px);
+  max-width: clamp(
+    280px,
+    calc(280px + (610 - 280) * ((100vw - 320px) / (1920 - 320))),
+    610px
+  );
   margin: 0 auto;
-  /* Соотношение сторон 390:438 ≈ 1:1.123 (оригинальное) */
   aspect-ratio: 390 / 438;
   /* Сохраняем оригинальное соотношение */
   height: auto;
   /* Высота рассчитывается автоматически по aspect-ratio */
 
   background: var(--color-white);
-  border: 1px solid #E5E8ED;
+  border: 1px solid #e5e8ed;
   border-radius: clamp(3px, 0.3vw, 4px);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -227,47 +309,49 @@ body {
   height: 55%;
   /* Фиксированный процент от высоты карточки */
   min-height: 0;
-  /* Разрешаем сжатие */
   flex-shrink: 0;
-  /* Не сжимается */
   flex-grow: 0;
-  /* Не растягивается */
   background: #ffd93d;
-  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%
+  );
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-/* ТЕКСТОВАЯ ЧАСТЬ - занимает оставшееся пространство */
 .catalog__card-content {
-  flex: 1;
-  /* Занимает всё оставшееся пространство (45%) */
-  min-height: 0;
-  /* Разрешаем сжатие */
-  padding: clamp(16px, 1.5vw, 20px);
+  min-height: 0; /* Разрешаем сжатие */
+  padding: clamp(12px, 1.5vw, 20px); /* Уменьшаем padding */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  /* Для обрезки текста если нужно */
+  overflow: hidden; /* Для обрезки текста если нужно */
+  gap: clamp(4px, 0.5vw, 8px); /* Единый gap вместо отдельных margin */
 }
-
 
 .catalog__card-image::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 40%, rgba(255, 217, 61, 0.6) 70%);
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(255, 217, 61, 0.6) 70%
+  );
 }
-
-
 
 .catalog__card-badge {
   display: inline-block;
   padding: clamp(3px, 0.3vw, 4px) clamp(10px, 1vw, 12px);
   border-radius: clamp(3px, 0.3vw, 4px);
-  font-size: clamp(12px, calc(12px + (13 - 12) * ((100vw - 320px) / (1920 - 320))), 13px);
-  font-weight: 600;
+  font-size: clamp(
+    12px,
+    calc(12px + (13 - 12) * ((100vw - 320px) / (1920 - 320))),
+    13px
+  );
+  font-weight: 400;
   color: var(--color-white);
   margin-bottom: clamp(8px, 1vw, 12px);
   align-self: flex-start;
@@ -297,9 +381,9 @@ body {
   font-family: var(--font-family-secondary);
   font-weight: 700;
   font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320))), 20px);
-  line-height: var(--line-height-150);
+  line-height: 1.3; /* Уменьшаем line-height для компактности */
   letter-spacing: 0;
-  margin: 0 0 clamp(8px, 1vw, 12px) 0;
+  margin: 0; /* Убираем margin, используем gap родителя */
   color: var(--color-dark);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -307,25 +391,34 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 2;
-  -webkit-box-orient: vertical;
-  flex-grow: 1;
+  flex: 1; /* Занимает доступное пространство */
+  min-height: 0; /* Разрешаем сжатие */
+  word-break: break-word; /* Перенос длинных слов */
+  hyphens: auto; /* Автоматическая расстановка переносов */
+}
+
+.catalog__card-title:single-line {
+  flex-grow: 0;
 }
 
 .catalog__card-price {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: clamp(8px, 1vw, 12px);
+  gap: clamp(6px, 0.8vw, 12px);
   font-family: var(--font-family-secondary);
   font-weight: 700;
   font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320))), 20px);
-  line-height: var(--line-height-150);
+  line-height: 1.3;
   color: var(--color-primary);
   margin: 0;
+  padding-top: clamp(4px, 0.5vw, 8px); /* Отступ сверху */
+  border-top: 1px solid rgba(229, 232, 237, 0.5); /* Легкая разделительная линия */
+  flex-shrink: 0; /* Не сжимается */
 }
 
 .catalog__card-author::before {
-  content: '|';
+  content: "|";
   color: var(--color-gray-light);
   margin-right: clamp(8px, 1vw, 12px);
 }
@@ -333,7 +426,11 @@ body {
 .catalog__card-author {
   font-family: var(--font-family-secondary);
   font-weight: 400;
-  font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))), 18px);
+  font-size: clamp(
+    14px,
+    calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))),
+    18px
+  );
   line-height: var(--line-height-150);
   color: var(--color-gray-light);
 }
@@ -351,7 +448,11 @@ body {
   border-radius: clamp(3px, 0.3vw, 4px);
   font-family: var(--font-family-secondary);
   font-weight: 700;
-  font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))), 16px);
+  font-size: clamp(
+    14px,
+    calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+    16px
+  );
   line-height: var(--line-height-160);
   color: var(--color-dark);
   cursor: pointer;
@@ -361,7 +462,11 @@ body {
 }
 
 .catalog__load-more-icon {
-  font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))), 18px);
+  font-size: clamp(
+    16px,
+    calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))),
+    18px
+  );
   color: var(--color-dark);
 }
 
@@ -392,21 +497,19 @@ body {
   }
 }
 
-
 .page-decoration__vector {
   position: fixed;
   width: 85px;
   height: 85px;
-  top: 1054px;                    /* Точно как в Figma */
-  right: 50px;     /* Поворот на -180° */
+  top: 1054px;
+  right: 50px;
   opacity: 1;
-  z-index: -1;                     /* Под карточками */
-  pointer-events: none;            /* Не мешает кликам */
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* Стили для SVG внутри */
 .page-decoration__vector svg {
   width: 100%;
   height: 100%;
-  color: #FFCF2D;                  /* Цвет как в макете */
+  color: #ffcf2d;
 }
