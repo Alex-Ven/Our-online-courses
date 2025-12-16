@@ -113,7 +113,7 @@ body {
     calc(60px + (77 - 60) * ((100vw - 320px) / (1920 - 320)))
   );
   background: var(--color-white);
-  border: 1px solid var(--color-gray-border);
+  border: 1px solid transparent;
   border-radius: clamp(3px, 0.3vw, 4px);
   font-family: var(--font-family-secondary);
   font-weight: 700;
@@ -170,7 +170,7 @@ body {
     46px
   );
   padding: 0 clamp(36px, 3vw, 45px) 0 clamp(16px, 1.5vw, 20px);
-  border: 1px solid var(--color-gray-border);
+  border: 1px solid var(--color-gray-border-hover);
   border-radius: clamp(3px, 0.3vw, 4px);
   font-family: var(--font-family-secondary);
   font-size: clamp(
@@ -187,7 +187,7 @@ body {
 
 .catalog__search-input:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--color-gray-light);
   box-shadow: var(--shadow-focus);
 }
 
@@ -293,7 +293,7 @@ body {
   border: 1px solid #e5e8ed;
   border-radius: clamp(3px, 0.3vw, 4px);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 12px 20px -8px rgba(30, 33, 44, 0.08);
   transition: var(--transition-default);
   display: flex;
   flex-direction: column;
@@ -301,7 +301,10 @@ body {
 
 .catalog__card:hover {
   transform: translateY(clamp(4px, 0.5vw, 8px));
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 20px 32px -12px rgba(30, 33, 44, 0.16);
+  
+  /* Дополнительные эффекты при наведении */
+  border-color: rgba(255, 63, 58, 0.2); /* Легкий красный оттенок бордера */
 }
 
 .catalog__card-image {
